@@ -42,3 +42,18 @@
     max-width: 1140px;
     margin: 15px auto;
 }
+
+/* Banner related styles */
+.banner {
+    max-width: 1140px;
+    margin: 0px auto;
+    margin-top: 120px;
+}
+
+.banner-content {
+    max-width: 570px;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}

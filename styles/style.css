@@ -175,15 +175,22 @@ btn-primary {
 
 .image-badge img:last-child {
     position: absolute;
-    width: 150px;
-    margin-left: -106px;
-    margin-top: -65px;
+    width: 250px;
+    margin-left: -160px;
+    margin-top: -115px;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+    display: inline-block;
+    filter: drop-shadow(20px 0px 20px rgba(0, 0, 0, 0.479));
 }
 
 
 .trusted-content li {
     color: rgba(0, 0, 0, 0.5);
-    margin: 15px auto;
+    margin: 20px 0px 20px 22px;
+    width: 399px;
+    font-size: 1rem;
+    line-height: 1.8;
+    word-wrap: break-word;
 }
 
 
@@ -191,6 +198,7 @@ btn-primary {
     font-family: 'Neto Serif';
     font-size: 3rem;
     font-weight: 700;
+    margin-top: 50px;
 }
 
 /* Latest Deals related styles */

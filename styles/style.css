@@ -149,6 +149,39 @@ btn-primary {
     align-items: center;
 }
 
+/* Plants Lover related styles*/
+
+.trusted-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1140px;
+    gap: 100px;
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 120px auto 60px;
+}
+
+.image-badge img:first-child {
+    max-width: 100%;
+}
+
+.image-badge img:last-child {
+    position: absolute;
+    width: 150px;
+    margin-left: -106px;
+    margin-top: -65px;
+}
+
+
+.trusted-content li {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.trusted-content h1 {
+    font-family: 'Neto Serif';
+    font-size: 3rem;
+    font-weight: 700;
+}
 
 /* responsive media query for small devices*/
 @media screen and (max-width:576px) {
@@ -163,5 +196,13 @@ btn-primary {
 
     .card-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trusted-container {
+        flex-direction: column;
+    }
+
+    .image-badge img:last-child {
+        display: none;
     }
 }

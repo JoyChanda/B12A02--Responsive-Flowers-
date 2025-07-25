@@ -34,9 +34,10 @@
 .btn-primary {
     background-color: #E95A08;
     color: white;
-    padding: 22px 50px;
+    padding: 20px 42px;
     font-weight: 600;
     border: none;
+    border-radius: 15px;
 }
 
 .banner-content-1 {
@@ -110,6 +111,10 @@
     margin-top: 10px;
 }
 
+.banner img {
+    border-bottom-right-radius: 15px;
+}
+
 
 /* Our Plants related styles */
 .card-container {
@@ -123,8 +128,9 @@
 
 .card img {
     height: 322px;
-    width: 70%;
+    width: 65%;
     margin: auto 0px;
+    border-radius: 15px;
 }
 
 .card p {
@@ -163,6 +169,8 @@ btn-primary {
 
 .image-badge img:first-child {
     max-width: 100%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 .image-badge img:last-child {
@@ -187,24 +195,31 @@ btn-primary {
 
 /* Latest Deals related styles */
 
+
 .deals-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
+    margin: 60px 0 120px 0;
 }
 
-.deal-card {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    overflow: hidden;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.product2 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    height: 250px;
+}
+
+.product3 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.product4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 1;
 }
 
 .card-container1 {
@@ -213,58 +228,64 @@ btn-primary {
     gap: 20px;
 }
 
-.deal-card.small {
-    width: 180px;
-    height: 100px;
-    flex-direction: column;
-}
-
-.deal-card.large {
-    width: 380px;
-    height: 220px;
-}
-
 /* Background images from CSS */
 .card1 {
     background-image: url('../assets/deal-bloom.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    border-radius: 15px;
 }
 
 .card2 {
     background-image: url('../assets/deal-ana.png ');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    border-radius: 15px;
 }
 
 .card3 {
     background-image: url('../assets/deal-zabo.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    border-radius: 15px;
 }
 
 .deal-text,
-.deal-text2 {
+.deal-text1 {
     background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
     padding: 35px;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    justify-content: center;
+    color: #ffffff;
+    gap: 26px;
 }
 
 .deal-text a {
-    color: white;
-    font-size: 0.6rem;
+    color: #ffffff;
+    font-size: 1rem;
 }
 
-.deal-text2,
+.deal-text1,
 a {
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 1.4rem;
 }
 
 .deal-text h3 {
-    font-size: 0.6rem;
+    font-size: 1.2rem;
     margin-bottom: 5px;
 }
 
-.deal-text2 h3 {
-    font-size: 14px;
+.deal-text1 h3 {
+    font-size: 2.4rem;
 }
 
 /* form related styles */
@@ -286,10 +307,11 @@ a {
     font-family: 'Noto Serif';
     font-size: 3.1rem;
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .subscribe-form {
-    width: 100%;
+    width: 50%;
     height: 50px;
     background: rgb(255, 255, 255);
     display: flex;
@@ -298,7 +320,9 @@ a {
     padding: 0 10px;
     gap: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
 }
+
 
 .subscribe-form input[type="email"] {
     flex: 1;
@@ -319,6 +343,7 @@ a {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border-bottom-right-radius: 15px;
 }
 
 .subscribe-form .btn-primary:hover {
@@ -370,6 +395,11 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .card-container img {
+        width: 85%;
+        height: auto;
+    }
+
     .trusted-container {
         flex-direction: column;
     }
@@ -379,7 +409,12 @@ footer {
     }
 
     .deals-grid {
-        grid-template-columns: repeat (1, 1fr);
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 500px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
     .bunch-container {
@@ -388,6 +423,7 @@ footer {
 
     .subscribe-form {
         flex-wrap: nowrap;
+        width: 100%;
     }
 
     .subscribe-form input[type="email"] {
@@ -408,10 +444,13 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         width: auto;
+        gap: 20px;
+        color: rgba(0, 0, 0, 0.5);
     }
 
     .footer-service {
         grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .social-media {
